@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Players Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ n.name }}</span>
+    <p>Points: {{ n.Points }}</p>
+    <p>Rebounds: {{ n.Rebounds }}</p>
+    <p>Assists: {{ n.Assists }}</p>
+    <p>Steals: {{ n.Steals }}</p>
+
+
+  </div>
+  <div class="card-action">
+    <a href="{% url 'cats_update' nba.id %}">Edit</a>
+    <a href="{% url 'cats_delete' nba.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

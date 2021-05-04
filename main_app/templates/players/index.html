@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Players List</h1>
+
+{% for n in nba %}
+  <a href="{% url 'detail' n.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ n.Name }}</span>
+            <p>Points: {{ n.Points }}</p>
+            <p>Rebounds: {{ n.Rebounds }}</p>
+            <p>Assists: {{ n.Assists }}</p>
+            <p>Steals: {{ n.Steals }}</p>
+
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
